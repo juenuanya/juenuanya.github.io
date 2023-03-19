@@ -24,15 +24,13 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="导航2" />
-
 
 <link rel="canonical" href="http://example.com/2023/02/24/JueNuan/">
 
 
 
   <title>
-JueNuan - 前端 |
+WMS系统组件的封装 |
 Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,7 +58,7 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">JueNuan
+  <h1 itemprop="name headline">WMS系统组件的封装
   </h1>
   
 <div class="meta">
@@ -102,12 +100,12 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
         </ul>
       </div>
     </header>
@@ -132,9 +130,7 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="item" rel="index" title="In 前端"><span itemprop="name">前端</span></a>
-<meta itemprop="position" content="1" /></span>
+<span><a href="/">Home</a></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -153,11 +149,18 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>categories:  搜索</p>
+    <p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.</p>
+<h2 id="UBardcode"><a href="#UBardcode" class="headerlink" title="UBardcode"></a>UBardcode</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ UBardcode  单页面组件的封装与使用</span><br></pre></td></tr></table></figure>
+<h3 id="UBardcode-的封装代码"><a href="#UBardcode-的封装代码" class="headerlink" title="UBardcode 的封装代码"></a>UBardcode 的封装代码</h3><h4 id="template区域的代码"><a href="#template区域的代码" class="headerlink" title="template区域的代码"></a>template区域的代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ UBardcode的template区域的代码</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;view class=<span class="string">&quot;Barcode-title&quot;</span>&gt;</span><br><span class="line">			&lt;text class=<span class="string">&quot;title&quot;</span> :style=<span class="string">&quot;&#123;&#x27;font-size&#x27;: size +&#x27;rpx&#x27;&#125;&quot;</span>&gt;&#123;&#123;title&#125;&#125;&lt;/text&gt; &lt;!-- 文本标题 --&gt;</span><br><span class="line">			&lt;slot name=<span class="string">&quot;uinput&quot;</span>&gt;</span><br><span class="line">				&lt;!-- 存放输入框的地方 --&gt;</span><br><span class="line">			&lt;/slot&gt;</span><br><span class="line">			&lt;slot name=<span class="string">&quot;Icon&quot;</span>&gt;</span><br><span class="line">				&lt;!-- 存放 图标的地方 --&gt;</span><br><span class="line">			&lt;/slot&gt;</span><br><span class="line">		&lt;/view&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="script的代码"><a href="#script的代码" class="headerlink" title="script的代码"></a>script的代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ UBardcode的script的代码</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="built_in">export</span> default &#123;</span><br><span class="line">		name: <span class="string">&quot;UBarcode&quot;</span>,</span><br><span class="line">		<span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">			<span class="built_in">return</span> &#123;&#125;;</span><br><span class="line">		&#125;,</span><br><span class="line">		props: &#123;</span><br><span class="line">			title: &#123;</span><br><span class="line">				<span class="built_in">type</span>: [String],</span><br><span class="line">				default: <span class="string">&#x27;标题&#x27;</span></span><br><span class="line">			&#125;,</span><br><span class="line">			size: &#123;</span><br><span class="line">				<span class="built_in">type</span>: [String, Number],</span><br><span class="line">				default: <span class="string">&#x27;32&#x27;</span></span><br><span class="line">			&#125;,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="UBardcode的style的代码"><a href="#UBardcode的style的代码" class="headerlink" title="UBardcode的style的代码"></a>UBardcode的style的代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">$ style的代码</span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.Barcode-title &#123;</span><br><span class="line">		///* 标题样式 */</span><br><span class="line">		border-bottom: 1px solid <span class="comment">#f5f4f3;</span></span><br><span class="line">		display: flex;</span><br><span class="line">		align-items: center;</span><br><span class="line">		padding: 0 20rpx 0 20rpx;</span><br><span class="line">		height: 72rpx;</span><br><span class="line">		line-height: 72rpx;</span><br><span class="line">	&#125;</span><br><span class="line">	.u-input &#123;</span><br><span class="line">		margin-left: 20rpx;</span><br><span class="line">	&#125;</span><br><span class="line">	.title &#123;</span><br><span class="line"></span><br><span class="line">		white-space: nowrap;</span><br><span class="line">		font-weight: bold;</span><br><span class="line">		text-align: justify;</span><br><span class="line">		text-align-last: justify;</span><br><span class="line">		width: 120rpx;</span><br><span class="line">	&#125;</span><br><span class="line">	.Descriptionbox &#123;</span><br><span class="line">		border-bottom: 1px solid <span class="comment">#f5f4f3;</span></span><br><span class="line">		display: flex;</span><br><span class="line">		align-items: center;</span><br><span class="line">		padding: 0 20rpx 0 20rpx;</span><br><span class="line">		height: 72rpx;</span><br><span class="line">		line-height: 72rpx;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	.DescriptionTitle &#123;</span><br><span class="line">		white-space: nowrap;</span><br><span class="line">		font-weight: bold;</span><br><span class="line">		text-align: justify;</span><br><span class="line">		text-align-last: justify;</span><br><span class="line">		width: 120rpx;</span><br><span class="line">	&#125;</span><br><span class="line">	.Descriptiontext &#123;</span><br><span class="line">		text-indent: 38rpx;</span><br><span class="line">		font-size: 28rpx;</span><br><span class="line">		line-height: 60rpx;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="UBardcode的组件的调用"><a href="#UBardcode的组件的调用" class="headerlink" title="UBardcode的组件的调用"></a>UBardcode的组件的调用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$  组件的调用</span><br><span class="line"></span><br><span class="line">&lt;UBardcode title=<span class="string">&quot;条码&quot;</span>&gt;</span><br><span class="line">	&lt;template v-slot:uinput&gt;</span><br><span class="line">		&lt;u-input :focus=<span class="string">&quot;refBarCodeInput&quot;</span></span><br><span class="line">                placeholder=<span class="string">&quot;请扫描或输入&quot;</span>           // 输入框的值</span><br><span class="line">                @input=<span class="string">&quot;onBarcodeChange&quot;</span> 		    //输入框的@input事件</span><br><span class="line">                :value=<span class="string">&quot;barcode&quot;</span>				    //输入框的焦点</span><br><span class="line">                border=<span class="string">&quot;false&quot;</span> 						//输入框的边框</span><br><span class="line">                fontSize=<span class="string">&quot;15&quot;</span> 				        //输入框的的字体大小</span><br><span class="line">                :adjustPosition=<span class="string">&quot;false&quot;</span>             //键盘弹起时，是否自动上推页面</span><br><span class="line">                clearable&gt;                          //是否显示清除控件</span><br><span class="line">		&lt;/u-input&gt;</span><br><span class="line">	&lt;/template&gt;</span><br><span class="line">	&lt;template v-slot:Icon&gt;                       //插入图标</span><br><span class="line">		&lt;u-icon name=<span class="string">&quot;scan&quot;</span> size=<span class="string">&quot;28&quot;</span> @click=<span class="string">&quot;onScanner(&#x27;Barcode&#x27;)&quot;</span>&gt;&lt;/u-icon&gt;</span><br><span class="line">	&lt;/template&gt;</span><br><span class="line">&lt;/UBardcode&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="UBardcode的组件的样式展示"><a href="#UBardcode的组件的样式展示" class="headerlink" title="UBardcode的组件的样式展示"></a>UBardcode的组件的样式展示</h4><p> 样式展示</p>
+<p><img data-src="/../assets/image/UBardcode.png" alt="图片"></p>
+<h3 id="UBardcode结束"><a href="#UBardcode结束" class="headerlink" title="UBardcode结束"></a>UBardcode结束</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 第一次使用hexo写工作心的， 在以后的日子里每个周末我都会写工作中的写的给大家一起分享</span><br></pre></td></tr></table></figure>
 
-      <div class="tags">
-          <a href="/tags/%E5%AF%BC%E8%88%AA2/" rel="tag"><i class="ic i-tag"></i> 导航2</a>
-      </div>
+
+
   </div>
 
    <footer>
@@ -168,7 +171,7 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-02-24 23:00:28" itemprop="dateModified" datetime="2023-02-24T23:00:28+08:00">2023-02-24</time>
+    <time title="Modified: 2023-03-19 19:11:45" itemprop="dateModified" datetime="2023-03-19T19:11:45+08:00">2023-03-19</time>
   </span>
 </div>
 
@@ -204,7 +207,7 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="http://example.com/2023/02/24/JueNuan/" title="JueNuan">http://example.com/2023/02/24/JueNuan/</a>
+    <a href="http://example.com/2023/02/24/JueNuan/" title="WMS系统组件的封装">http://example.com/2023/02/24/JueNuan/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -223,7 +226,7 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
     <div class="item left">
       
 
-  <a href="/2023/02/19/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclip4jbpj20zk0m87cv.jpg" title="欢迎来到Jue Nuan 的个人博客">
+  <a href="/2023/02/19/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciszlczyj20zk0m816d.jpg" title="欢迎来到Jue Nuan 的个人博客">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>欢迎来到Jue Nuan 的个人博客</h3>
@@ -247,11 +250,9 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#UBardcode"><span class="toc-number">1.</span> <span class="toc-text">UBardcode</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UBardcode-%E7%9A%84%E5%B0%81%E8%A3%85%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.</span> <span class="toc-text">UBardcode 的封装代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#template%E5%8C%BA%E5%9F%9F%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.1.</span> <span class="toc-text">template区域的代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#script%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.2.</span> <span class="toc-text">script的代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UBardcode%E7%9A%84style%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.3.</span> <span class="toc-text">UBardcode的style的代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UBardcode%E7%9A%84%E7%BB%84%E4%BB%B6%E7%9A%84%E8%B0%83%E7%94%A8"><span class="toc-number">1.1.4.</span> <span class="toc-text">UBardcode的组件的调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UBardcode%E7%9A%84%E7%BB%84%E4%BB%B6%E7%9A%84%E6%A0%B7%E5%BC%8F%E5%B1%95%E7%A4%BA"><span class="toc-number">1.1.5.</span> <span class="toc-text">UBardcode的组件的样式展示</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UBardcode%E7%BB%93%E6%9D%9F"><span class="toc-number">1.2.</span> <span class="toc-text">UBardcode结束</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
-        <ul>
-          <li class="active"><a href="/2023/02/24/JueNuan/" rel="bookmark" title="JueNuan">JueNuan</a></li>
-        </ul>
       </div>
       <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -266,18 +267,6 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
       <a href="/archives/">
         <span class="count">2</span>
         <span class="name">posts</span>
-      </a>
-    </div>
-    <div class="item categories">
-      <a href="/categories/">
-        <span class="count">1</span>
-        <span class="name">categories</span>
-      </a>
-    </div>
-    <div class="item tags">
-      <a href="/tags/">
-        <span class="count">1</span>
-        <span class="name">tags</span>
       </a>
     </div>
 </nav>
@@ -328,17 +317,16 @@ Jue Nuan = 欢迎来到Jue Nuan 的个人网站</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/02/19/hello-world/" title="欢迎来到Jue Nuan 的个人博客">欢迎来到Jue Nuan 的个人博客</a></span>
+    <span><a href="/2023/02/24/JueNuan/" title="WMS系统组件的封装">WMS系统组件的封装</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%89%8D%E7%AB%AF/" title="In 前端">前端</a>
 </div>
 
-    <span><a href="/2023/02/24/JueNuan/" title="JueNuan">JueNuan</a></span>
+    <span><a href="/2023/02/19/hello-world/" title="欢迎来到Jue Nuan 的个人博客">欢迎来到Jue Nuan 的个人博客</a></span>
   </li>
 
   </ul>
